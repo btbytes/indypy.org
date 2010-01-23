@@ -1,0 +1,88 @@
+<!DOCTYPE html> 
+<html> 
+    <meta charset=utf-8>
+    <head>
+        <title>Indypy.org - The Indianapolis Python User Group</title>
+        <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen" title="Screen CSS" charset="utf-8">
+        <script src="/js/jquery-1.4.min.js"/>
+        <script src="/js/jquery.twitter.js"/>
+        <script type="text/javascript"> 
+        <!--//--><![CDATA[//><!--   
+            // twitter
+            $(document).ready(function() {
+                $("#tweets").getTwitter({
+                userName: "indypy",
+                numTweets: 5,
+                loaderText: "Loading indpy tweets...",
+                slideIn: false,
+                showHeading: false,
+                headingText: "Latest Tweets",
+                showProfileLink: false
+                });
+            });    
+            //friendfeed
+            $.getJSON("http://friendfeed.com/api/feed/room/indypy?format=json&num=25&callback=?",
+                    function(data) {
+                      $.each(data.entries, function() {
+                        $("#friendfeed ul").append('<li><a href="' + this.link + '">' + this.title + '</a><br /><p class="bottom">by ' + this.user.name + '</li>');
+                      });
+                    });
+            //--><!]]>
+        </script> 
+    </head>
+    <body>         
+        <div class="container_12" id="wrap">
+            <header>
+                <h1>
+                    <a href="http://indypy.org">Indypy</a>
+                    is the Indianapolis Python User Group
+                </h1> 
+                <p id="tagline">once bitten, twice charmed.</p>
+            </header>                                          
+            <div class="grid_8 alpha">
+                <h3>Next meetup</h3> 
+                <p>Jan 20, 2010. 7:00PM</span></p>
+                <p>Scott's Brewhouse, Indianapolis <br/>
+                    3905 E 96th St
+                    Indianapolis, IN 46240
+                    317-574-0101</p> 
+                    
+                
+                <p>Details: 
+                        <a href="http://python.meetup.com/182/calendar/12134814/">
+                            Meetup.com</a></p>
+                              
+            </div><!-- .grid_8 omega -->                
+            <div class="grid_4 omega">
+                <h3>What is Indypy</h3>
+                <p>
+                    Indypy is a group that meets once a month to discuss the Python programming language and related technologies.
+                </p>
+            </div><!-- .grid_4 .omega -->
+            <div class="clear"></div>
+            <div class="grid_4 alpha">
+                <h3>Mailing List</h3>
+                <p><a href="http://python.meetup.com/182/messages/archive/">Start a  topic, join the discussion or view the archive.</a></p>
+                 
+            </div><!-- grid_4 alpha-->  
+            <div id ="friendfeed" class="grid_4">
+                <h3>Indypy News</h3>
+                 <p>What's interesting? Join our <a href="http://friendfeed.com/indypy/">Friendfeed</a></p>
+                 <ul></ul>
+            </div><!-- grid_4 alpha-->  
+            <div class="grid_4 omega">
+                <h3>@indypy</h3>
+                <p>Follow us on Twitter - <a href="http://twitter.com/indypy">@indypy</a></p>
+                <div id="tweets"></div>
+                
+            </div><!-- grid_4 alpha-->  
+            <div class="clear"></div>
+            <footer>
+                <p>
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/us/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/us/88x31.png" /></a><br /><span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/Text" property="dc:title" rel="dc:type">content</span> on <a xmlns:cc="http://creativecommons.org/ns#" href="http://indypy.org" property="cc:attributionName" rel="cc:attributionURL">Indpy.org</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/us/">Creative Commons Attribution-Noncommercial-Share Alike 3.0 United States License</a>.</p>
+            </footer>
+        </div><!-- ~.container_12 -->            
+            
+    </body>
+            
+            

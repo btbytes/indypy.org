@@ -1,0 +1,93 @@
+@import url("960.css") ;
+@font-face {
+font-family: "museo sans 500";
+src: url("/fonts/MuseoSans_500.otf");
+}                                    
+
+/* 500 weight fonts are free for use available from http://www.exljbris.nl/ */          
+body{
+text-align: left;
+font-family: "museo sans 500", helvetica, sans-serif;
+color:#666;
+}
+
+a{
+    text-decoration:none;
+    color:#444;
+    border-bottom: solid 1px #ccd;
+}
+a:visited{
+    text-decoration:none;
+    
+}                        
+
+h1 {
+padding: 0;
+margin: 0;
+color: #000;
+font-size: 170%;
+font-weight: normal;
+}
+
+h1 a {
+    color: #9a2efe;
+    background:none;
+}
+
+h1 a:hover {
+text-decoration: underline;
+}
+
+h2 {
+padding: 0;
+margin: 20px 0 5px 0;
+font-size: 190%;
+font-weight: normal;
+}
+
+h2 + p {
+padding: 0;
+margin: 0;
+color: #555;
+font-size: 110%;
+}
+
+h3 {
+padding: 0 0 5px 0;
+margin: 20px 0 5px 0;
+color: #333;
+font-size: 140%;
+font-weight: normal;
+border-bottom: solid 1px #ccc;
+}
+
+img {
+border: solid 1px #000;
+} 
+footer{
+    font-size:0.9em;
+    color:#999;
+} 
+#friendfeed ul, #tweets ul {
+    list-style-position: outside;
+    list-style-type: square;
+    margin-left:-2em;
+    
+}
+
+#friendfeed ul li, #tweets ul li {
+    font-size:85%;
+    lineheight:140%;  
+}
+
+/* custom */ 
+#tagline{
+    margin:0;
+    padding:0;
+    color:#999;
+}
+
+/* hide the 'by' lines in friendfeed */
+p.bottom{
+    display:none;
+}
